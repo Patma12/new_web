@@ -1,0 +1,44 @@
+{% extends 'myapp/components/header.html'%}
+
+{% block content %}
+
+<div class='conteinere' style='margin:10%'>
+
+<h1> สอบถามปัญหาได้เลยจ้าาา</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class='form-group'>
+            <label for='name'>ชื่อผู้ติดต่อ : </label>
+            <input type='text' class='form-control' id='name' name='name'>
+        </div>
+
+        <div class='form-group'>
+            <label for='email'>emal : </label>
+            <input type='email' class='form-control' id='email' name='email'>
+        </div><br>
+
+
+        <div class='form-group'>
+            <label for="title"> หัวข้อ :</label>
+            <select id="title" name="title" size="3">
+                <option>การเคลมสินค้า</option>
+                <option>สินค้า</option>
+                <option>สอบถามข้อมูลสินค้า</option>
+                <option>อื่นๆ</option>
+            </select>
+
+        <div class='form-group'>
+            <label for='detail'> รายละเอียด : </label>
+            <Textarea rows='5' class='form-control' id='detail' name='detail'></Textarea>
+            {% comment %} #name ใช้สำหรับ getdata / id จะให้เหมือนกับ for เพื่อใช้ลิงค์กัน {% endcomment %}
+        </div>
+
+        <button type='submit' class='btn btn-primary'>submit</button>
+
+
+</div>
+
+
+{% endblock %}

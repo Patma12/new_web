@@ -245,45 +245,34 @@
       </ul>
     </div>
 
-    <header class="mb-auto" style='margin-bottom:12%; color:red;'>
-      <div>
-        <h3 class="float-md-start mb-0">A-Clean</h3>
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a
-            class="nav-link fw-bold py-1 px-0 active"
-            aria-current="page"
-            href="{% url 'home' %}"
-            >หน้าแรก</a
-          >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
-            >เกี่ยวกับเรา</a
-          >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
+    <header style='margin-bottom:20px; margin-top:-1%;color:red; border-style: outset;  padding:15px' >
+          <a styly="margin:3px; padding:5px" href="{% url 'home' %}"> หน้าแรก </a>
+          <a styly="margin:3px; padding:5px" href="{% url 'contact' %}"
             >ติดต่อเรา</a
           >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
+          <a style="margin:3px; padding:5px" href="{% url 'about_us' %}"
+            >เกี่ยวกับเรา</a
+          >
+          <a style="margin:3px; padding:5px" href="{% url 'tracking' %}"
             >Tracking</a
           >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
-            >Employee</a
-          >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
+          <a style="margin:3px; padding:5px" href="{% url 'ask' %}"
             >สอบถาม</a
           >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
-            >Question</a
+          <a style="margin:3px; padding:5px" href="{% url 'questions' %}"
+            >ตอบคำถาม</a
           >
-          <a class="nav-link fw-bold py-1 px-0" href="{% url 'home' %}"
-            >เพิ่มสินค้า</a
-          >
-        </nav>
-      </div>
+          <a style="margin:0 3px; padding:5px;" href="{% url 'home' %}"
+            >เพิ่มสินค้า</a>
+        
     </header>
-
+<div style='height:80vh;'>
     {%block content%}
     
 
     {% endblock content%}
+
+</div>
     <script
       src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -291,3 +280,5 @@
     ></script>
   </body>
 </html>
+
+{% include 'myapp/components/footer.html' %} 

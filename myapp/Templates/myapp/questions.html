@@ -1,0 +1,32 @@
+{% extends "myapp/components/header.html" %} {% block content %}
+<div class="container">
+  <h2>TR elements define table rows</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ชื่อ</th>
+        <th scope="col">อีเมล</th>
+        <th scope="col">หัวข้อ</th>
+        <th scope="col">รายละเอียด</th>
+        <th scope="col">ตอบคำถาม</th>
+        <th scope="col">ตอบคำถาม</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for q in questions %}
+      <tr style='color:red;'>
+        <td style='color:red;'>{{ q.id }}</td>
+        <td>{{ q.name }}</td>
+        <td>{{ q.title }}</td>
+        <td>{{ q.detail }}</td>
+        <td>{{ q.answer }}</td>
+        <td><a href="{% url 'home' %}" class="btn btn-primary">ตอบ</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

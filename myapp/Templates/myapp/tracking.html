@@ -1,0 +1,19 @@
+{% extends 'myapp/components/header.html' %}
+
+
+{% block content%}
+
+
+
+
+    {% for t in tracking %}
+        <div style='margin:5%'>
+            {% if t.tracking%}
+             <p>{{t.name}} เบอร์โทร {{t.tel}} - หมายเลขติดตามพัสดุ {{t.tracking}} </p>
+            {% else %}
+                <p>{{t.name}} เบอร์โทร {{t.tel}} <span style='color:red;'> - ยังไม่มีการจัดส่งให้ขนส่ง</span></p>
+            {% endif %}
+        </div>
+    {% endfor %}
+<hr>
+{% endblock content%}
